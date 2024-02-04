@@ -16,11 +16,7 @@ use PhpParser\Node\Expr\List_;
 |
 */
 
-// Route::get('/', [ListingController::class, 'index']);
-Route::get('/', function () {
-  return view('welcome');
-});
-
+Route::get('/', [ListingController::class, 'index']);
 // Create Form
 Route::get('/listings/create', [ListingController::class, 'create']);
 
