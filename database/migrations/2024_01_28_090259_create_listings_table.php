@@ -15,12 +15,16 @@ return new class extends Migration
             $table->id();
 
             $table->string('title');
-            $table->string('tags');
-            $table->string('company');
+            $table->string('logo')->nullable();
+           
+            $table->string('company')->nullable();
             $table->string('location');
-            $table->string('email');
-            $table->string('website');
+             $table->string('tags')->nullable();
+            $table->string('email')->nullable();
+            $table->string('website')->nullable();
             $table->string('description');
+            $table->string('type')->nullable();
+            $table->string('shift')->nullable();
             $table->timestamps();
         });
     }

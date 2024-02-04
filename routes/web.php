@@ -16,13 +16,24 @@ use PhpParser\Node\Expr\List_;
 |
 */
 
-Route::get('/', [ListingController::class, 'index']);
+// Route::get('/listings', [ListingController::class, 'index']);
+Route::get('/listings', [ListingController::class, 'index']);
+// Route::get('/listings', function() {
+//  return view('listings.jobListing');
+// });
+Route::get('/listings/aplly', function() {
+ return view('job-apply.jobApply');
+});
+Route::get('/listing', function() {
+ return view('JobDescView.JobDescView');
+});
 // Create Form
-Route::get('/listings/create', [ListingController::class, 'create']);
+// Route::get('/listings/create', [ListingController::class, 'create']);
 
-//Store listing data
+//Create Job
 Route::post('/listings', [ListingController::class, 'store']);
 
 //Signle Listing
 
+// Route::get('/listings/{listing}', [ListingController::class, 'show']);
 Route::get('/listings/{listing}', [ListingController::class, 'show']);

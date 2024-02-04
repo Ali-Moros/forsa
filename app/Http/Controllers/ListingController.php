@@ -12,9 +12,14 @@ class ListingController extends Controller
 
     {
         // dd(request('tag'));
-        return view('listings.index', [
+        // return view('listings.index', [
 
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(3)
+        //     'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(3)
+        // ]);
+// dd(request('tag'));
+        return view('listings.jobListing', [
+
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(4)
         ]);
     }
 
@@ -23,7 +28,7 @@ class ListingController extends Controller
     // Show single listing
     public function show(Listing $listing)
     {
-        return view('listings.show', [
+        return view('JobDescView.JobDescView', [
             'listing' => $listing
         ]);
     }
@@ -33,20 +38,31 @@ class ListingController extends Controller
     {
         return view('listings.create');
     }
-    //Store listing data
+    //Store job data
     public function store(Request $request)
     {
+     
         $formFields = $request->validate([
             'title' => 'required',
-            'company' => ['required', Rule::unique('listings', 'company')],
+            'company' => 'nullable|string',
             'location' => 'required',
-            'website' => 'required',
-            'email' => ['required', 'email'],
-            'tags' => 'required',
+            'website' => 'nullable|string',
+            'email' => 'nullable|email',
+            'tags' => 'nullable|string',
+            'shift' => 'nullable|string',
+            'type' => 'nullable|string',
             'description' => 'required'
         ]);
+
+          if($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+          }
+
         Listing::create($formFields);
 
-        return redirect('/')->with('message', 'Listing created successfully!');
+        return redirect('/listings')->with('message', 'تم نشر الوظيفة بنجاح!');
     }
+
+
+
 }
