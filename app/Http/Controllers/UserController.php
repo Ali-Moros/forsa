@@ -38,4 +38,41 @@ class UserController extends Controller
 
      return redirect('/listings')->with('message', 'تم إنشاء حسابك بنجاح!');
    }
+
+   //Logout
+
+   public function logout(Request $request) {
+      auth()->logout(); 
+
+      $request->session()->invalidate();
+      $request->session()->regenerateToken();
+      return redirect('/')->with('message', 'تم تسجيل الخروج!');
+   }
+
+   //Show Login Form
+
+   public function login() {
+      return view('users.login');
+   }
+
+   //User Authenticattion
+
+   public function authenticate(Request $request) {
+      $formFields = $request->validate([
+         
+         'email' => ['required', 'email'],
+         'password' => 'required'
+     ]);
+
+     if(auth()->attempt($formFields)) {
+      $request->session()->regenerate();
+
+      return redirect('/')->with('message', 'تم تسجيل الدخول!');
+     }
+
+     return back()->withErrors(['email' => 'معلومات خاطئة, الرجاء إعادة المحاولة!'])->onlyInput('email');
+  
+   }
+
+
 }

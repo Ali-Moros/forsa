@@ -20,7 +20,7 @@
         </li>
         <li>
             <div class="text-primaryColor hover:border-primaryColor hover:border-b-2 hover:pb-1 hover: duration-100">
-                <router-link to="/jobs">تصفح الوظائف</router-link>
+                <a href="/listings">تصفح الوظائف</a>
             </div>
         </li>
     </ul>

@@ -22,9 +22,12 @@ Route::get('/listings', [ListingController::class, 'index']);
 // Route::get('/listings', function() {
 //  return view('listings.jobListing');
 // });
-Route::get('/listings/aplly', function() {
- return view('job-apply.jobApply');
-});
+
+
+// Route::get('/listings/aplly', function() {
+//  return view('job-apply.jobApply');
+// });
+Route::get('/listings/aplly',  [ListingController::class, 'apply'])->middleware('auth');
 
 
 Route::get('/', function() {
@@ -39,7 +42,7 @@ Route::get('/listing', function() {
 // Route::get('/listings/create', [ListingController::class, 'create']);
 
 //Create View
-Route::post('/listings', [ListingController::class, 'store']);
+Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
 
 //Edit View
 
@@ -48,15 +51,24 @@ Route::post('/listings', [ListingController::class, 'store']);
 
 //Delete View
 
-Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');;
 //Signle Listing
 
 // Route::get('/listings/{listing}', [ListingController::class, 'show']);
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 // Rgistration View
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
+
 
 
 Route::post('/users', [UserController::class, 'store']);
 
+//Logout 
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');;
+
+// Login View
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+// User login 
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);

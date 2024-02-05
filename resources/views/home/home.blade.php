@@ -5,7 +5,7 @@
 
 
         <div>
-
+            <x-message />
             <x-.Home.NavBar />
             <x-.Home.Hero />
         </div>

@@ -33,10 +33,12 @@ class ListingController extends Controller
         ]);
     }
 
-    //Show creare
-    public function create()
+    //Show Form View
+    public function apply()
+
     {
-        return view('listings.create');
+        
+        return view('job-apply.jobApply');
     }
     //Store job data
     public function store(Request $request)
