@@ -54,5 +54,18 @@
                 <a href="#">قدم الآن</a>
             </div>
         </div>
+
+        <form method="POST" action="/listings/{{ $listing->id }}">
+            @csrf
+            @method('DELETE')
+            <div class="flex justify-center items-center mt-3">
+                <div
+                    class="font-bold bg-primaryColor text-white hover:bg-primaryHover transition duration-300 px-5 py-3 rounded-lg">
+                    <button type ="submit">حذف</button>
+                </div>
+            </div>
+        </form>
     </div>
+</div>
+</div>
 </div>

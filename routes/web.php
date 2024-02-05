@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\UserController;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\List_;
@@ -16,7 +17,7 @@ use PhpParser\Node\Expr\List_;
 |
 */
 
-// Route::get('/listings', [ListingController::class, 'index']);
+
 Route::get('/listings', [ListingController::class, 'index']);
 // Route::get('/listings', function() {
 //  return view('listings.jobListing');
@@ -24,16 +25,38 @@ Route::get('/listings', [ListingController::class, 'index']);
 Route::get('/listings/aplly', function() {
  return view('job-apply.jobApply');
 });
+
+
+Route::get('/', function() {
+ return view('home.home');
+});
+
+
 Route::get('/listing', function() {
  return view('JobDescView.JobDescView');
 });
-// Create Form
+
 // Route::get('/listings/create', [ListingController::class, 'create']);
 
-//Create Job
+//Create View
 Route::post('/listings', [ListingController::class, 'store']);
 
+//Edit View
+
+// Route::put('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+
+//Delete View
+
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 //Signle Listing
 
 // Route::get('/listings/{listing}', [ListingController::class, 'show']);
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+// Rgistration View
+Route::get('/register', [UserController::class, 'create']);
+
+
+Route::post('/users', [UserController::class, 'store']);
+

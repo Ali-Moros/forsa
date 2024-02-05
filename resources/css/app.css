@@ -13,4 +13,18 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+
+    .input-field {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 70%;
+        font-size: 16px;
+        margin-left: 8px;
+    }
+
+    .textarea-message {
+        height: 150px;
+        resize: none;
+    }
 }

@@ -62,7 +62,17 @@ class ListingController extends Controller
 
         return redirect('/listings')->with('message', 'تم نشر الوظيفة بنجاح!');
     }
+     
 
+    // Show Edit Form
+//    public function edit(Listing $listing) {
+     
+//     return view('listing.edit', ['listing' => $listing]);
+//    }
 
+public function destroy(Listing $listing) {
+   $listing->delete();
+   return redirect('/listings')->with('message', 'تم الحذف');
+}
 
 }
