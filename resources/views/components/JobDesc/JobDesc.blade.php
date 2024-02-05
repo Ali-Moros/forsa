@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <form method="POST" action="/listings/{{ $listing->id }}">
+        {{-- <form method="POST" action="/listings/{{ $listing->id }}">
             @csrf
             @method('DELETE')
             <div class="flex justify-center items-center mt-3">
@@ -64,7 +64,7 @@
                     <button type ="submit">حذف</button>
                 </div>
             </div>
-        </form>
+        </form> --}}
     </div>
 </div>
 </div>

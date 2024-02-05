@@ -71,7 +71,7 @@
             </a>
             <a href="/login">
                 <button
-                    class="  px-4 py-2border rounded-md hover:border-primaryColor hover: duration-500 bg-transparent text-primaryColor">تسجيل
+                    class="  px-4 py-2 border rounded-md hover:border-primaryColor hover: duration-500 bg-secondaryColor text-primaryColor">تسجيل
                     الدخول</button>
             </a>
         </div>

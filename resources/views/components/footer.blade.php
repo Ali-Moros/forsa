@@ -41,11 +41,14 @@
             <h1 class="font-cairo font-bold text-6xl text-white mb-8">فُرصة</h1>
             <p class="font-cairo font-light text-sm text-white pb-4">إكتشف عالم الفرص</p>
             <div class="flex">
-                <img class="w-8 h-8" src="../../assets/svgs/instagram-alt-logo-24 1.svg" alt="">
-                <img class="w-8 h-8" src="../../assets/svgs/facebook-circle-logo-24 1.svg" alt="">
-                <img class="w-8 h-8" src="../../assets/svgs/linkedin-square-logo-24 1.svg" alt="">
-                <img class="w-8 h-8" src="../../assets/svgs/youtube-logo-24 1.svg" alt="">
-                <img class="w-8 h-8" src="../../assets/svgs/twitter-logo-24 1.svg" alt="">
+
+
+
+                <img class="w-8 h-8" src="{{ asset('images/svgs/instagram-alt-logo-24 1.svg') }}" alt="">
+                <img class="w-8 h-8" src="{{ asset('images/svgs/facebook-circle-logo-24 1.svg') }}" alt="">
+                <img class="w-8 h-8" src="{{ asset('images/svgs/linkedin-square-logo-24 1.svg') }}" alt="">
+                <img class="w-8 h-8" src="{{ asset('images/svgs/youtube-logo-24 1.svg') }}" alt="">
+                <img class="w-8 h-8" src="{{ asset('images/svgs/twitter-logo-24 1.svg') }}" alt="" />
             </div>
         </div>
 

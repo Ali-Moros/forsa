@@ -76,13 +76,28 @@ class ListingController extends Controller
 //    }
 
 public function destroy(Listing $listing) {
+
+    // Delte Authentication 
+  if($listing->user_id != auth()->id()) {
+    abort(403, 'ليس لديك تصريح بالتعديل!');
+  }
+
    $listing->delete();
    return redirect('/listings')->with('message', 'تم الحذف');
 }
+
+
+ // Listings Edits 
+public function edit() {
+   return view('edits.edits', ['listings' => auth()->user()->listings()->get()]);
+}
+
 
 // Profile 
  public function profile() {
     return view('profile.profile');
  }
+
+
 
 }

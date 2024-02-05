@@ -15,11 +15,11 @@
                         الملف الشخصي
                     </li>
                 </a>
-                <a href="#">
+                <a href="listings/edit">
                     <li
                         class="w-full pl-16 pr-2 py-2 bg-white hover:bg-slate-100 transtion duration-300 border-b flex justify-center gap-2">
                         <box-icon type="solid" color="#3e3e3e" name="bookmarks"></box-icon>
-                        المفضلة
+                        منشوراتك
                     </li>
                 </a><a href="#">
                     <li

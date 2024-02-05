@@ -1,4 +1,4 @@
-<div id="contact-us" class=" h-full pt-12 w-[700px]">
+<div id="contact-us" class=" h-full pt-12 w-full">
     <h1 class="font-cairo font-light text-4xl text-center text-primaryColor">
         تواصل معنا
     </h1>
@@ -33,10 +33,11 @@
                 </div>
 
 
+                <div class="flex justify-center items-center mt-5">
+                    <button
+                        class="px-4 py-2 font-semibold rounded bg-primaryColor hover:bg-primaryHover text-white border ">ارسال</button>
 
-                <button
-                    class="px-4 py-2 font-semibold rounded-md transition-colors ease-in-out duration-300 font-cairo grid place-items-center pr-32 pt-12 ">ارسال</button>
-
+                </div>
             </form>
 
             <div class="ml-4">
@@ -45,9 +46,7 @@
         </div>
 
 
-        <div>
 
-        </div>
 
 
     </div>
@@ -57,6 +56,28 @@
         </h1>
     </div>
     <div class="flex text-center items-center justify-center pb-12">
-        <div>social Icons </div>
+        <div class="flex justify-center items-center gap-1">
+
+            <a href="#">
+                <img class="w-12 h-12" src="{{ asset('images/svgs/Facebook.svg') }}" alt="">
+            </a>
+            <a href="#">
+                <img class="w-12 h-12" src="{{ asset('images/svgs/google.svg') }}" alt="">
+            </a>
+            <a href="#">
+                <img class="w-12 h-12" src="{{ asset('images/svgs/Instagram.svg') }}" alt="">
+            </a>
+            <a href="#">
+                <img class="w-12 h-12" src="{{ asset('images/svgs/Linkedin.svg') }}" alt="">
+            </a>
+            <a href="#">
+                <img class="w-12 h-12" src="{{ asset('images/svgs/Twitter.svg') }}" alt="">
+            </a>
+            <a href="#">
+                <img class="w-12 h-12" src="{{ asset('images/svgs/Youtube.svg') }}" alt="">
+            </a>
+
+
+        </div>
     </div>
 </div>

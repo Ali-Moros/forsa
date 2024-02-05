@@ -1,7 +1,7 @@
 <div id="about-us" class="h-screen">
     <div class="w-full h-full bg-primaryColor flex justify-between">
         <div>
-            <div class="w-[700] pr-32 pt-12">
+            <div class="w-[700px] pr-32 pt-12">
                 <h2 class="text-white font-cairo font-light text-4xl">
                     ما هو مشروع
                     <span class="text-secondaryColor font-bold"> فُرصة؟</span>
@@ -14,7 +14,7 @@
                 </p>
             </div>
             <div class="mt-12">
-                <div class="w-[700] pr-32 pt-12">
+                <div class="w-[700px] pr-32 pt-12">
                     <h2 class="text-white font-cairo font-light text-4xl"> هدفنا؟ </h2>
                     <p class="text-white font-cairo pt-12 text-1xl font-light">
                         هدفنا هو أن نكون الوجهة المفضلة للباحثين عن عمل وأصحاب العمل ،

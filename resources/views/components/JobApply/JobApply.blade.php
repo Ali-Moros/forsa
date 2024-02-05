@@ -12,17 +12,27 @@
                         </label>
 
                         <input type="text" id="title" name="title" value="{{ old('title') }}"
-                            class="border-2 border-solid rounded-lg border-grayBorder py-1 px-2 w-[500px]" />
+                            class="border-2 border-solid rounded-lg border-grayBorder py-1 px-2 w-[500px] mb-3" />
                         @error('title')
                             <p class="text-red-500 text-xs mt-1">هذا الحقل مطلوب!</p>
                         @enderror
 
 
-                        <label for="tags" class="block font-bold text-lg mb-2">كلمات مفتاحية
+                        <label for="company" class="block font-bold text-lg">إسم المؤسسة
+                        </label>
+
+                        <input type="text" id="company" name="company" value="{{ old('company') }}"
+                            class="border-2 border-solid rounded-lg border-grayBorder py-1 px-2 w-[500px] mb-3" />
+                        @error('company')
+                            <p class="text-red-500 text-xs mt-1">هذا الحقل مطلوب!</p>
+                        @enderror
+
+
+                        <label for="tags" class="block font-bold text-lg">كلمات مفتاحية
                         </label>
 
                         <input type="text" id="tags" name="tags" value="{{ old('title') }}"
-                            class="border-2 border-solid rounded-lg border-grayBorder py-1 px-2 w-[500px]" />
+                            class="border-2 border-solid rounded-lg border-grayBorder py-1 px-2 w-[500px] mb-3" />
 
 
 
@@ -97,8 +107,8 @@
                         </div>
                     </div>
                     <div class="mt-5">
-                        <input class="accent-primaryColor cursor-pointer" type="checkbox" id="terms" name="terms"
-                            value="terms" />
+                        <input class="accent-primaryColor cursor-pointer" type="checkbox" id="terms"
+                            name="terms" value="terms" />
                         <label for="terms">قد قرأت ووافقت على سياسة الخصوصية وشروط الخدمة.</label>
                     </div>
 
