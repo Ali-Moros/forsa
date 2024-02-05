@@ -60,6 +60,9 @@ class ListingController extends Controller
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
           }
 
+
+          $formFields['user_id'] = auth()->id();
+
         Listing::create($formFields);
 
         return redirect('/listings')->with('message', 'تم نشر الوظيفة بنجاح!');
@@ -76,5 +79,10 @@ public function destroy(Listing $listing) {
    $listing->delete();
    return redirect('/listings')->with('message', 'تم الحذف');
 }
+
+// Profile 
+ public function profile() {
+    return view('profile.profile');
+ }
 
 }

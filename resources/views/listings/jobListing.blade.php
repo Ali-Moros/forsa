@@ -8,11 +8,11 @@
         <div class="relative">
             <div>
                 <p class="absolute end-5 -top-10 text-lg text-grayText">
-                    <span>50 </span>نتيجة
+                    {{-- <span>50 </span>نتيجة --}}
                 </p>
                 <div class="grid  grid-cols-2 gap-8 overflow-scroll  no-scrollbar">
 
-                    <x-jobListing.jobCard.placeHolder />
+                    {{-- <x-jobListing.jobCard.placeHolder /> --}}
 
                     @unless (count($listings) == 0)
                         @foreach ($listings as $listing)

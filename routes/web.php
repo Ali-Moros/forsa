@@ -51,8 +51,11 @@ Route::post('/listings', [ListingController::class, 'store'])->middleware('auth'
 
 //Delete View
 
-Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');;
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
 //Signle Listing
+
+//Profile View 
+Route::get('listings/profile', [ListingController::class, 'profile'])->middleware('auth');
 
 // Route::get('/listings/{listing}', [ListingController::class, 'show']);
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
@@ -72,3 +75,5 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 // User login 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+
