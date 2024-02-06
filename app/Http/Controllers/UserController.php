@@ -36,7 +36,7 @@ class UserController extends Controller
 
      auth()->login($user);
 
-     return redirect('/listings')->with('message', 'تم إنشاء حسابك بنجاح!');
+     return redirect('/listings')->with('message', '!تم إنشاء حسابك بنجاح');
    }
 
    //Logout

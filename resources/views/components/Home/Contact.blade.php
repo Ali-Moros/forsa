@@ -9,7 +9,7 @@
 
 
 
-        <div class="flex justify-between w-full h-full">
+        <div class="flex justify-between items-center w-full h-full">
             <form class="w-[700px]" action="/" method="post">
 
 
@@ -41,7 +41,7 @@
             </form>
 
             <div class="ml-4">
-                <img class="w-[500px]" src="{{ asset('images/bro4.jpg') }}" alt="">
+                <img class="w-[700px]" src="{{ asset('images/bro4.png') }}" alt="">
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                 <img class="w-12 h-12" src="{{ asset('images/svgs/Facebook.svg') }}" alt="">
             </a>
             <a href="#">
-                <img class="w-12 h-12" src="{{ asset('images/svgs/google.svg') }}" alt="">
+                <img class="w-12 h-12 pt-2" src="{{ asset('images/svgs/google.svg') }}" alt="">
             </a>
             <a href="#">
                 <img class="w-12 h-12" src="{{ asset('images/svgs/Instagram.svg') }}" alt="">

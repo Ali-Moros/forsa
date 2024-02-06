@@ -2,7 +2,7 @@
     <div
         class="w-48 flex flex-col justify-center items-center border border-solid rounded-lg border-grayBorder overflow-hidden pt-5">
         <div class="flex flex-col justify-center items-center mb-3">
-            <img src="{{ asset('images/user.png') }}" class="w-12" />
+            <img src="{{ asset('images/user.png') }}" class="w-12 mb-2" />
             {{-- <p>وليد مختار</p> --}}
             <p>{{ auth()->user()->name }}</p>
         </div>
@@ -15,10 +15,10 @@
                         الملف الشخصي
                     </li>
                 </a>
-                <a href="listings/edit">
+                <a href="/listings/edit">
                     <li
                         class="w-full pl-16 pr-2 py-2 bg-white hover:bg-slate-100 transtion duration-300 border-b flex justify-center gap-2">
-                        <box-icon type="solid" color="#3e3e3e" name="bookmarks"></box-icon>
+                        <box-icon type="solid" color="#3e3e3e" name="detail"></box-icon>
                         منشوراتك
                     </li>
                 </a><a href="#">

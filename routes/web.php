@@ -60,17 +60,22 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->mid
 Route::get('listings/profile', [ListingController::class, 'profile'])->middleware('auth');
 
 
-//Listing Edits View
+//Listings Edits View
 Route::get('listings/edit', [ListingController::class, 'edit'])->middleware('auth');
 
-
+// Show Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 // Rgistration View
 Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
+// List Edit View
+Route::get('/listings/{listing}/listEdit', [listingController::class, 'listEdit']);
 
+// Listing Update
+Route::put('/listings/{listing}', [listingController::class, 'update']);
 
+// User Rgistration
 Route::post('/users', [UserController::class, 'store']);
 
 //Logout 

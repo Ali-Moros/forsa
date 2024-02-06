@@ -9,29 +9,30 @@
 
 </div>
 <div class="p-10">
-    <div class="border border-solid rounded-lg border-grayBorder pt-10 pb-16">
-        <div class="flex flex-col justify-center items-center gap-3  ">
-            <button class="  left-16 top-5 flex justify-center items-center gap-2">
+    <div class="w-full h-full border border-solid rounded-lg border-grayBorder pt-10 pb-16">
+        <div class="flex flex-col justify-center items-center gap-3 relative ">
+            <button class="absolute left-16 top-5 flex justify-center items-center gap-2">
                 <p class="text-lg">حفظ</p>
                 <box-icon class="cursor-pointer" name="bookmark" color="#0e2f56" size="md"></box-icon>
             </button>
 
-            <p class="   font-bold">
-                تاريخ النشر: <span class="font-semibold">2024/2/2</span>
+            <p class="absolute right-16 top-5 font-bold">
+                تاريخ النشر: <span class="font-semibold">{{ date('d-m-Y', strtotime($listing->created_at)) }}</span>
             </p>
+
             <img src={{ $listing->logo ? asset('storage/' . $listing->logo) : asset('images/forsa.png') }}
-                class="w-12" />
-            <p class="font-bold text-lg">مجال</p>
+                class="w-12" alt="company-logo" />
+            <p class="font-bold text-lg">{{ $listing->company }}</p>
             <div class="relative">
                 <input dir="rtl" type="tel" name="phone" placeholder="09XXXXXXX"
                     class="h-16 w-[600px] border border-solid rounded-lg border-sky-600 pr-3" />
                 <button type="submit"
-                    class="text-sky-600 font-bold px-4 py-2 text-sm border border-solid rounded-lg border-sky-600">
+                    class="text-sky-600 font-bold px-4 py-2 text-sm absolute left-5 top-[23%] border border-solid rounded-lg border-sky-600 hover:bg-btnHoverFill hover:border-borderHover transition">
                     إتصل بنا
                 </button>
             </div>
         </div>
-        <div dir="rtl" class="pr-20 pl-40 mt-10">
+        <div dir="rtl" class="flex flex-col gap-10 pr-20 pl-40 mt-10">
             <p class="font-bold mt-2">
                 المسمى الوظيفي:<span class="font-medium">{{ $listing->title }}</span>
             </p>

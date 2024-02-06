@@ -60,7 +60,7 @@
                     نحن</a>
             </li>
         </div>
-        <div class="flex list-none justify-between font-cairo">
+        <div class="flex list-none justify-between items-center font-cairo">
 
             <a href="/register">
 
@@ -71,7 +71,7 @@
             </a>
             <a href="/login">
                 <button
-                    class="  px-4 py-2 border rounded-md hover:border-primaryColor hover: duration-500 bg-secondaryColor text-primaryColor">تسجيل
+                    class="  px-4 py-2 mr-3 font-semibold border rounded-md hover:border-primaryColor hover: duration-500 bg-secondaryColor text-primaryColor">تسجيل
                     الدخول</button>
             </a>
         </div>

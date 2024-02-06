@@ -8,8 +8,14 @@
                 <img src="{{ asset('images/signup.png') }}" class="w-[300px]" />
             </div>
         </div>
-        <div class="w-3/5 h-full pt-10 pb-16 px-20 bg-primaryColor flex justify-center items-center">
+        <div class="w-3/5 h-full pt-10 pb-16 px-20 bg-primaryColor flex justify-center items-center relative">
+
+            <a href='/' class="absolute top-5 left-5 flex items-center gap-1">
+                <p class="text-white mb-1">رجوع</p>
+                <box-icon color='#fff' name='arrow-back'></box-icon>
+            </a>
             <div>
+
                 <div class="mb-10 text-white">
                     <h1 class="text-2xl font-bold mb-2">مرحبا بك !</h1>
                     <p class="font-light text-xl">
@@ -36,7 +42,7 @@
                             <p class="text-red-500 text-xs mb-5">الرجاء إدخال البريد الإلكتروني!</p>
                         @enderror
                         <label for="password" class="font-light text-md text-white">كلمة المرور</label>
-                        <input type="password" id="password" name="password"
+                        <input type="password" id="password" name="password" autocomplete="new-password"
                             class="border border-solid rounded-lg py-1 px-2 w-full block mt-2 " />
                         @error('password')
                             <p class="text-red-500 text-xs mb-5"">الرجاء إدخال كلمة المرور!</p>
@@ -66,6 +72,7 @@
                         </button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>

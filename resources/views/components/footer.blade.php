@@ -54,7 +54,8 @@
 
 
     </div>
-    <div class="text-center pt-8">
-        <h1 class="font-cairo font-light text-sm text-secondaryColor">جميع الحقوق محفوظة | © Devs Team 2024 </h1>
+    <div class="text-center pt-8 pb-5">
+        <h1 class="font-cairo font-semibold text-[#909090] text-sm">جميع الحقوق محفوظة | © Devs Team
+            2024 </h1>
     </div>
 </div>

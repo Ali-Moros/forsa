@@ -2,7 +2,11 @@
 @section('content')
     <div dir="rtl"
         class="mt-20 w-3/5 mx-auto h-[37rem] border border-solid rounded-lg border-grayBorder bg-white flex justify-center items-center overflow-hidden">
-        <div class="w-3/5 h-full pt-10 pb-16 bg-primaryColor flex justify-center items-center">
+        <div class="w-3/5 h-full pt-10 pb-16 bg-primaryColor flex justify-center items-center relative">
+            <a href='/' class="absolute top-5 left-5 flex items-center gap-1">
+                <p class="text-white mb-1">رجوع</p>
+                <box-icon color='#fff' name='arrow-back'></box-icon>
+            </a>
             <div>
                 <div class="mb-10 text-white">
                     <h1 class="text-2xl font-bold mb-2">مرحبا بك مجددا !</h1>
@@ -23,7 +27,7 @@
                             <p class="text-red-500 text-xs mb-5">{{ $message }}</p>
                         @enderror
                         <label for="password" class="font-light text-md text-white">كلمة المرور</label>
-                        <input type="password" id="password" name="password"
+                        <input type="password" id="password" name="password" autocomplete="current-password"
                             class="border border-solid rounded-lg py-2 px-2 w-full block mt-2 mb-5" />
                         {{-- @error('password')
                             <p class="text-red-500 text-xs mb-5"">الرجاء إدخال كلمة المرور!</p>

@@ -19,7 +19,7 @@ class ListingController extends Controller
 // dd(request('tag'));
         return view('listings.jobListing', [
 
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(4)
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(8)
         ]);
     }
 
@@ -65,16 +65,47 @@ class ListingController extends Controller
 
         Listing::create($formFields);
 
-        return redirect('/listings')->with('message', 'تم نشر الوظيفة بنجاح!');
+        return redirect('/listings')->with('message', '!تم نشر الوظيفة بنجاح');
     }
      
 
-    // Show Edit Form
-//    public function edit(Listing $listing) {
-     
-//     return view('listing.edit', ['listing' => $listing]);
-//    }
+    // Show Edit View
+   public function listEdit(Listing $listing) {
+    
+    return view('ListEdit.listEdit', ['listing' => $listing]);
+   }
 
+
+   //Listing Update 
+   public function update(Request $request, Listing $listing)
+   {
+    
+       $formFields = $request->validate([
+           'title' => 'required',
+           'company' => 'nullable|string',
+           'location' => 'required',
+           'website' => 'nullable|string',
+           'email' => 'nullable|email',
+           'tags' => 'nullable|string',
+           'shift' => 'nullable|string',
+           'type' => 'nullable|string',
+           'description' => 'required'
+       ]);
+
+         if($request->hasFile('logo')) {
+           $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+         }
+
+
+         $formFields['user_id'] = auth()->id();
+
+         $listing->update($formFields);
+
+       return back()->with('message', '!تم التعديل بنجاح');
+   }
+
+
+   // Listing Delte
 public function destroy(Listing $listing) {
 
     // Delte Authentication 
@@ -83,7 +114,7 @@ public function destroy(Listing $listing) {
   }
 
    $listing->delete();
-   return redirect('/listings')->with('message', 'تم الحذف');
+   return back()->with('message', 'تم الحذف');
 }
 
 

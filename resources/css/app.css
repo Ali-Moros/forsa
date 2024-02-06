@@ -27,4 +27,7 @@
         height: 150px;
         resize: none;
     }
+    html {
+        scroll-behavior: smooth;
+    }
 }
